@@ -1,7 +1,7 @@
 #include <Arduino.h>      // ← ADD THIS
 #include <BleKeyboard.h>
 
-BleKeyboard bleKeyboard("ESP32 Macropad", "DIY", 100);
+BleKeyboard bleKeyboard("Carbopad", "Jayse", 100);
 
 const int buttons[] = {12, 14, 27, 25};
 const int NUM_BUTTONS = 4;
@@ -34,7 +34,7 @@ void loop() {
     delay(300);
   }
 
-  if (digitalRead(buttons[2]) == LOW) {
+  if (digitalRead(buttons[3]) == LOW) {
     bleKeyboard.press(KEY_LEFT_CTRL);
     bleKeyboard.press('z');
     delay(100);
@@ -42,7 +42,7 @@ void loop() {
     delay(300);
   }
 
-  if (digitalRead(buttons[3]) == LOW) {
+  if (digitalRead(buttons[2]) == LOW) {
   bleKeyboard.press(KEY_LEFT_CTRL);
   bleKeyboard.press('y');
   delay(100);
